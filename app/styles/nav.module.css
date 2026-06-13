@@ -1,0 +1,125 @@
+.navbar {
+    border-bottom: 4px solid var(--main-color);
+}
+.navbar > div {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1rem;
+    max-width: 95vw;
+    margin: auto;
+}
+.nav_logo {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* border: 2px solid #DEB8AB; */
+}
+.nav_logo img {
+    position: absolute;
+    inset: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.nav_links {
+    display: block;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+}
+.nav_links a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+.order_button {
+    /* position: absolute; */
+    bottom: 20px;
+    /* left: calc(50% - 130px); */
+    border: 2px solid var(--main-color);
+    background-color:  var(--main-color);
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 20px;
+    /* width: 260px; */
+}
+
+.hamburger_container {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .navbar > div {
+        padding: 1rem;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #fff;
+        border-bottom: 4px solid var(--main-color);
+        top: 135px;
+        left: -300px;
+        z-index: 50;
+        padding: 20px;
+        transition: all ease-in-out 0.1s;
+    }
+    .hamburger_container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+    }
+    .hamburger {
+        position: relative;
+    }
+    .hamburger, .hamburger::before, .hamburger::after  {
+        width: 40px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 5px;
+        transition: all ease-in-out 0.2s;
+    }
+    .hamburger::before, .hamburger::after {
+        position: absolute;
+        content: '';
+    }
+
+    .hamburger::before {
+        top: -15px;
+    }
+    .hamburger::after {
+        bottom: -15px;
+    }
+
+    .hamburger_menu_open .hamburger {
+        background-color: transparent;
+    }
+
+    .hamburger_menu_open .hamburger::before {
+        rotate: 45deg;
+        top: 0;
+    }
+
+    .hamburger_menu_open .hamburger::after {
+        rotate: -45deg;
+        bottom: 0;
+    }
+    .menu_open {
+        display: flex;
+        left: unset;
+        right: 0;
+    }
+    
+}
