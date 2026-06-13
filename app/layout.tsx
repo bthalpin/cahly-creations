@@ -29,6 +29,9 @@ export default function RootLayout({
         lang="en"
         className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+        <head>
+          <link rel="icon" type="image/png" href="/favicon.png"/>
+        </head>
         <body className="main">
         
             <Nav />
