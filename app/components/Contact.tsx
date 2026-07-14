@@ -35,7 +35,8 @@ export default function Contact ({ open, setOpen }: Props) {
         }
 
         return () => {
-            setContact({ ...defaultContact })
+            setContact({ ...defaultContact });
+            setSuccess(false);
         }
     }, [open])
 
