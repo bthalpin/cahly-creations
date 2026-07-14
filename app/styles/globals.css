@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     max-width: 90rem;
     margin: auto;
@@ -40,4 +40,37 @@ body {
     width: 100%;
     object-fit: contain;
     object-position: top center;
+}
+
+.input_container {
+    position: relative;
+    width: 100%;
+
+}
+
+.input_container label {
+    position: absolute;
+    content: '';
+    top: -10px;
+    left: 12px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #807b7a;
+    padding: 0 2px;
+}
+
+.input_container input, .input_container textarea {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    width: 100%;
+}
+
+.input_container textarea {
+    resize: none;
+    height: 150px;
+}
+
+.input_container input:focus, .input_container textarea:focus {
+    outline: 2px solid var(--main-color);
 }
