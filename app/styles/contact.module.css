@@ -38,6 +38,9 @@
     border-radius: 10px;
     width: 500px;
     max-width: 95vw;
+
+    overflow-y: auto;
+    max-height: 95vh;
 }
 
 .modal p, .modal h2 {
@@ -85,4 +88,11 @@
 
 .success_message p {
     margin: 15px 0;
+}
+
+@media screen and (max-width: 550px) {
+    .modal p, .modal h2 {
+        width: 90%;
+        text-wrap: balance;
+    }
 }
