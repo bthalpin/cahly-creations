@@ -7,7 +7,7 @@
     align-items: center;
     z-index: 10;
     backdrop-filter: blur(2.5px);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out, inset 0.2s ease-in-out;
     inset: 0;
     width: 0;
     height: 0;
@@ -38,6 +38,9 @@
     border-radius: 10px;
     width: 500px;
     max-width: 95vw;
+
+    overflow-y: auto;
+    max-height: 95vh;
 }
 
 .modal p, .modal h2 {
@@ -50,7 +53,12 @@
     position: absolute;
     right: 10px;
     top: 10px;
+    opacity: 0.7;
     cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+.close_button:hover {
+    opacity: 1;
 }
 .send_button {
     bottom: 20px;
@@ -64,15 +72,27 @@
     cursor: pointer;
     text-decoration: none;
     padding: 5px 20px;
+    transition: all 0.15s ease-in-out;
+
 }
 .send_button:disabled {
     opacity: 0.7;
 }
-
+.send_button:hover {
+    background-color: var(--highlight);
+    border-color: var(--highlight);
+}
 .success_message {
     text-wrap: balance;
 }
 
 .success_message p {
     margin: 15px 0;
+}
+
+@media screen and (max-width: 550px) {
+    .modal p, .modal h2 {
+        width: 90%;
+        text-wrap: balance;
+    }
 }
